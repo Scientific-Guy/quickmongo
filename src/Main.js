@@ -98,7 +98,7 @@ class Database extends Base {
     /**
      * Checks if the value given to check matches to existing one
      * @param {string} key Key
-     * @param {string} value Value to check
+     * @param {any} value Value to check
      * @example db.set('foo', 'bar')
      * db.is('foo', 'bar').then(console.log); // Will return true
      */
