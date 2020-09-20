@@ -94,6 +94,19 @@ class Database extends Base {
         let get = await this.get(key);
         return !!get;
     }
+    
+    /**
+     * Checks if the value given to check matches to existing one
+     * @param {string} key Key
+     * @param {string} value Value to check
+     * @example db.set('foo', 'bar')
+     * db.is('foo', 'bar').then(console.log); // Will return true
+     */
+    async is(key, value) {
+        if (!Util.isKey(key)) throw new Error("Invalid key specified!", "KeyError");
+        let get = await this.get(key);
+        return get == value;
+    }
 
     /**
      * Checks if there is a data stored with the given key
