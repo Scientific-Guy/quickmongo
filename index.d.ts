@@ -86,6 +86,7 @@ export class Database extends Base {
   public set(key: string, value: any): Promise<any>;
   public delete(key: string): Promise<any>;
   public exists(key: string): Promise<boolean>;
+  public is(key: string, value: any): Promise<boolean>;
   public has(key: string): Promise<boolean>;
   public get(key: string): Promise<any>;
   public fetch(key: string): Promise<any>;
